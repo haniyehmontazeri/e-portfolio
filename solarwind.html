@@ -25,16 +25,16 @@
             <div class="inner">
 
                 <!-- Logo -->
-                <a href="index.html" class="logo">
+                <!-- <a href="index.html" class="logo">
                     <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
-                </a>
+                </a> -->
 
                 <!-- Nav -->
-                <nav>
+                <!-- <nav>
                     <ul>
                         <li><a href="#menu">Menu</a></li>
                     </ul>
-                </nav>
+                </nav> -->
 
             </div>
         </header>
@@ -55,105 +55,193 @@
         <div id="main">
             <div class="inner">
 
-                <h1>Generic Page</h1>
-                <span class="image main"><img src="images/ddos1.png" alt="" /></span>
-                <p>ifconfig </p>
-
+                <p><h3>Create a table that analyses the solar winds exploit using the Cyber Kill Chain. Are there any phases that you cannot identify?</h3>Fortunatly no, here is the table:</p>
                 <table>
                     <thead>
                       <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        <th>Cyber Kill Chain Phase</th>
+                        <th>Description</th>
+                        <th>Relevance to SolarWinds Exploit</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>Reconnaissance</td>
+                        <td>Gathering information about the target organization.</td>
+                        <td>Attackers likely conducted extensive research.</td>
+                        
                       </tr>
                       <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>Weaponization</td>
+                        <td>Preparing the malicious payload for deployment.</td>
+                        <td>Attackers weaponized the legitimate software.</td>
+                        
                       </tr>
                       <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>Delivery</td>
+                        <td>Delivering the weaponized payload to the target.</td>
+                        <td>Compromised updates of SolarWinds' Orion software.</td>
+                        
                       </tr>
                       <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>Exploitation</td>
+                        <td>Taking advantage of vulnerabilities in the target.</td>
+                        <td>Exploiting the backdoor in the compromised updates.</td>
+                        
+                      </tr>
+                      <tr>
+                        <td>Installation</td>
+                        <td>Establishing persistence in the target's systems.</td>
+                        <td>Gaining unauthorized access and maintaining control.</td>
+                        
+                      </tr>
+                      <tr>
+                        <td>Command and Control</td>
+                        <td>Establishing communication channels with the malware.</td>
+                        <td>Enabling remote control and data exfiltration.</td>
+                        
+                      </tr>
+                      <tr>
+                        <td>Actions on Objectives</td>
+                        <td>Carrying out specific goals, such as data exfiltration.</td>
+                        <td>Potentially stealing sensitive information.</td>
+                        
                       </tr>
                     </tbody>
                     </table>
-                <p>Reflection:
-                    - I was able to run the tool on Kali Linux and also install it on Ubuntu, but eitherway, an
-                    Auxiliary failure error occured.
+                
                 </p>
-                <p>references:
-                    <a href="https://www.linkedin.com/pulse/how-perform-syn-flooding-attack-metasploit">
-                        Yadav, S. (no date) How to perform syn flooding attack with Metasploit, LinkedIn.
-                        Available at:
-                        https://www.linkedin.com/pulse/how-perform-syn-flooding-attack-metasploit-
-                        shubham-yadav (Accessed: March 22, 2023). </a>
+                <br><br>
+                <p>
+                    <h3> a list of possible mitigations for each phase. Are there any phases you cannot mitigate?</h3>
+                    Reconnaissance:
+
+    Implement robust network monitoring and intrusion detection systems to identify and alert on suspicious reconnaissance activities.
+    Educate employees about the importance of safeguarding sensitive information and being cautious with sharing information online.
+    Utilize web application firewalls (WAFs) to detect and block malicious reconnaissance attempts.
+
+Weaponization:
+
+    Employ strong endpoint protection solutions, including anti-malware and anti-exploit software, to detect and block weaponized payloads.
+    Regularly update and patch software and systems to address known vulnerabilities that can be exploited during the weaponization phase.
+    Implement email filtering and anti-phishing solutions to prevent the delivery of weaponized payloads via malicious emails.
+
+Delivery:
+
+    Use secure software distribution channels and digitally signed updates to ensure the integrity of delivered payloads.
+    Employ network segmentation to limit the lateral movement of attackers in case a weaponized payload is delivered.
+    Employ email security measures to detect and block malicious attachments or links used for payload delivery.
+
+Exploitation:
+
+    Maintain a robust vulnerability management program to identify and patch vulnerabilities in a timely manner.
+    Implement strong network and host-based intrusion prevention systems to detect and block exploitation attempts.
+    Conduct regular security assessments, including penetration testing, to identify and address vulnerabilities proactively.
+
+Installation:
+
+    Implement strong access controls and authentication mechanisms to prevent unauthorized installation of malware.
+    Utilize privileged access management (PAM) solutions to manage and monitor privileged accounts to prevent unauthorized installations.
+    Implement application control solutions to restrict the execution of unauthorized programs or scripts.
+
+Command and Control:
+
+    Employ network traffic monitoring solutions to detect and block communication with known malicious command and control (C2) servers.
+    Utilize threat intelligence feeds to identify and block communication with IP addresses or domains associated with malicious activities.
+    Employ network behavioral analysis to identify anomalous traffic patterns indicating communication with C2 servers.
+
+Actions on Objectives:
+
+    Implement robust data loss prevention (DLP) solutions to monitor and prevent unauthorized exfiltration of sensitive data.
+    Implement strong encryption and access controls to protect sensitive data at rest and in transit.
+    Regularly backup critical data and systems to ensure their availability and facilitate recovery in case of an incident
                 </p>
+                <br><br>
+                <p>
+                    <h3>tools would you utilise in each phase? Give reasons for your answer.</h3> 
+                    <br>
+                    Reconnaissance:
+                    Network Monitoring and Intrusion Detection Systems (IDS/IPS): These tools can help detect and analyze suspicious network traffic, including reconnaissance activities, by monitoring network communications and identifying patterns or indicators of compromise.
+            
+                Weaponization:
+                    Endpoint Protection Solutions: Anti-malware and anti-exploit software can detect and block weaponized payloads by scanning files and processes for known malicious signatures or behaviors. These solutions provide real-time protection against malware execution and exploitation attempts.
+            
+                Delivery:
+                    Secure Software Distribution Channels: Utilizing secure channels, such as verified software update servers or digital signatures, ensures the integrity of delivered payloads, preventing tampering or injection of malicious code during delivery.
+            
+                Exploitation:
+                    Vulnerability Scanning Tools: These tools scan networks and systems for known vulnerabilities and provide insights into potential entry points for exploitation. They help identify and prioritize vulnerabilities for patching or mitigation.
+            
+                Installation:
+                    Access Control and Authentication Systems: Tools such as Identity and Access Management (IAM) systems or Privileged Access Management (PAM) solutions enforce strong access controls, ensuring that only authorized users can install software or make system changes.
+            
+                Command and Control:
+                    Network Traffic Monitoring and Analysis Tools: These tools monitor network traffic, analyze protocols, and identify suspicious communication patterns with known malicious IP addresses or domains associated with command and control (C2) servers.
+            
+                Actions on Objectives:
+                    Data Loss Prevention (DLP) Solutions: DLP tools monitor data flows and apply policies to prevent unauthorized exfiltration of sensitive data, providing visibility and control over data movement within the organization's network.
+                </p>
+                <br><br>
+
+                <p>references:</p>
+            
+                <a href="https://text.npr.org/985439655">
+                    Solar winds article by temple- Raston(2021)
+
+                </a>
             </div>
         </div>
 
         <!-- Footer -->
-        <footer id="footer">
-            <div class="inner">
-                <section>
-                    <h2>Get in touch</h2>
-                    <form method="post" action="#">
-                        <div class="fields">
-                            <div class="field half">
-                                <input type="text" name="name" id="name" placeholder="Name" />
-                            </div>
-                            <div class="field half">
-                                <input type="email" name="email" id="email" placeholder="Email" />
-                            </div>
-                            <div class="field">
-                                <textarea name="message" id="message" placeholder="Message"></textarea>
-                            </div>
-                        </div>
-                        <ul class="actions">
-                            <li><input type="submit" value="Send" class="primary" /></li>
-                        </ul>
-                    </form>
-                </section>
-                <section>
-                    <h2>Follow</h2>
-                    <ul class="icons">
-                        <li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a>
-                        </li>
-                        <li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a>
-                        </li>
-                        <li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a>
-                        </li>
-                        <li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a>
-                        </li>
-                        <li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-                        <li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
-                        <li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-                        <li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
-                    </ul>
-                </section>
-                <ul class="copyright">
-                    <li>&copy; Untitled. All rights reserved</li>
-                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                </ul>
-            </div>
-        </footer>
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<!--
+									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									-->
+									<!--
+									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									-->
+									<li><a href="https://instagram.com/haniyeh.montazer?igshid=MzNlNGNkZWQ4Mg==" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<!--
+									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
+									-->
+									<li><a href="https://github.com/haniyehmontazeri" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<!--
+									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
+									-->
+									<!--
+									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+									-->
+									<li><a href="honeymont@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
 
     </div>
 
